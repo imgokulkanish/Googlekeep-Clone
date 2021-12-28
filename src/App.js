@@ -3,6 +3,7 @@ import { Header } from './Components/Header'
 import { CreateArea } from './Components/CreateArea'
 import { Note } from './Components/Note'
 import "./App.css"
+import Footer from './Components/Footer'
 const App = () => {
   const [notes,setNotes]=useState([]);
   function addNote(newNote){
@@ -30,6 +31,7 @@ const App = () => {
           )
         })
       }
+      <Footer/>
     </div>
   )
 }
