@@ -38,7 +38,7 @@ export const CreateArea = (props) => {
         <div>
             <form className='create-note'>
                 {isExpanded && <input name='title' placeholder='Title' value={note.title} onChange={handleChange}/>}
-                <textarea name='content' placeholder='Take a note...' rows={3} value={note.content} onClick={expand} onChange={handleChange}/>
+                <textarea name='content' placeholder='Take a note...' rows={isExpanded ? 3 : 1 } value={note.content} onClick={expand} onChange={handleChange}/>
                 <Zoom in={isExpanded}>
                 <Fab onClick={handleSubmit}>
                 <AddIcon />

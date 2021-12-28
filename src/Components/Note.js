@@ -2,11 +2,14 @@ import React from 'react'
 import { Delete } from '@material-ui/icons'
 
 export const Note = (props) => {
+    function handleClick(){
+        props.onDelete(props.id);
+    }
     return (
         <div className='note'>
             <h1>{props.title}</h1>
             <p>{props.content}</p>
-            <button>
+            <button onClick={handleClick}>
                 <Delete/>
             </button>
         </div>
